@@ -29,9 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
-        <h1 className="text-8xl font-bold text-black text-center py-8 bg-white">
+        <h1 className="text-8xl font-bold text-black text-center pt-5 bg-white">
         <Link href="/">  
-          Cars For Sale
+          Ama's Cars For Sale
         </Link>
         </h1>
         {children}
