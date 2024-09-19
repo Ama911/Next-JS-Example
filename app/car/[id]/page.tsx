@@ -48,7 +48,7 @@ const handlePurchase = () => {
                 ['engine', car ? car.engine : '...'],
                 ['horsepower', car ? car.horsepower : '...'],
                 ['owners', car ? car.owners : '...'],
-              ].map(([label, value], index) => (
+              ].map(([label, value]) => (
                 <tr key={label}>
                   <td className="px-4 py-2 text-lg">{label}:</td>
                   <td className="px-4 py-2 text-lg">{value}</td>
