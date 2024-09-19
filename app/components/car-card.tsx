@@ -3,7 +3,12 @@ import Link from 'next/link';
 import { Car } from '../types/car';
 import { motion } from 'framer-motion';
 
-const CarCard = ({ car, isLoading }: {car: Car, isLoading: boolean}) => {
+interface CarCardProps {
+  car?: Car; // Make car prop optional
+  isLoading: boolean;
+}
+
+const CarCard: React.FC<CarCardProps> = ({ car, isLoading }) => {
   return (
     <>
       {isLoading ? (
@@ -11,6 +16,7 @@ const CarCard = ({ car, isLoading }: {car: Car, isLoading: boolean}) => {
           <div className="animate-spin w-10 h-10 border-t-2 border-b-2 border-gray-900 rounded-full mx-auto mt-20"></div>
         </div>
       ) : (
+        car &&
         <Link href={`/car/${car.id}`}>
           <motion.div 
             className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-white relative"
