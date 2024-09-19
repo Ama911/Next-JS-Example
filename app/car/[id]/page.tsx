@@ -35,7 +35,7 @@ const handlePurchase = () => {
       {!car &&
         <div className="w-96 h-96 mr-5 shadow-lg bg-gray-200 animate-pulse" />
       }
-        <div className='shadow overflow-hidden sm:rounded-lg mb-3'>
+        <div className="shadow overflow-hidden sm:rounded-lg mb-3">
           <table className="min-w-72 text-sm text-gray-900 bg-white">
             <tbody>
               {[

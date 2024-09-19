@@ -13,8 +13,8 @@ const Filter: FC<FilterProps> = ({ setFilter, carMakes }: FilterProps) => {
   };
 
   return (
-    <div className='flex justify-center bg-gray-200 p-5 space-x-3'>
-      <select onChange={handleMakeChange} className='mb-1 bg-white p-2 rounded border-gray-300 text-black'>
+    <div className="flex justify-center bg-gray-200 p-5 space-x-3">
+      <select onChange={handleMakeChange} className="mb-1 bg-white p-2 rounded border-gray-300 text-black">
         <option value="">All</option>
         {carMakes.map(make => (
           <option key={make} value={make}>{make}</option>
