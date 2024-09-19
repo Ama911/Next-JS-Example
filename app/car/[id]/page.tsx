@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import Confetti from 'react-confetti';
 import { Car } from '@/app/types/car';
 import { AnimatePresence, motion } from 'framer-motion';
-import Skeleton from 'react-loading-skeleton';
 
 
 export default function CarDetail({ params }: { params: { id: string } }) {
@@ -60,9 +59,9 @@ const handlePurchase = () => {
         </div>
       </div>
 
-      {car && car.features.map((feature, index) => (
-    <p key={index} className="text-lg text-gray-500 mt-1 italic">{feature}</p>
-  ))}
+      {car && car.features.map((feature) => (
+    <p key={feature} className="text-lg text-gray-500 mt-1 italic">{feature}</p>
+))}
 
       <motion.button
           onClick={handlePurchase}
