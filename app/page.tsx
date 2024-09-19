@@ -21,8 +21,8 @@ const Home = () => {
     fetchCars();
   }, []);
 
-  const carMakes = [...new Set(cars.map(car => car.make))].sort();
-
+  const carMakes = Array.from(new Set(cars.map(car => car.make))).sort();
+  
   const filteredCars = filter 
     ? cars.filter(car => car.make === filter) 
     : cars;
