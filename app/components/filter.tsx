@@ -1,14 +1,15 @@
 // components/Filter.tsx
-import React from 'react';
+import React, { ChangeEvent, FC } from 'react';
 
-const Filter = ({ filter, setFilter, setPriceRange, carMakes }) => {
+interface FilterProps {
+  setFilter: (value: string) => void;
+  carMakes: string[];
+}
 
-  const handleMakeChange = (event) => {
+const Filter: FC<FilterProps> = ({ setFilter, carMakes }: FilterProps) => {
+
+  const handleMakeChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setFilter(event.target.value);
-  };
-
-  const handlePriceChange = (event) => {
-    setPriceRange([0, Number(event.target.value)]);
   };
 
   return (
